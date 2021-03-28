@@ -1,0 +1,23 @@
+<html class="dark">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+        <script defer src="timer.js"></script>
+        <title>Timer</title>
+    </head>
+    <body class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 cursor-default select-none p-2">
+        <div class="">
+            <div class="flex p-1">Hours <input id="input-timer-hours" class="bg-gray-300 dark:bg-gray-700 w-16 h-6 p-1 ml-auto" type="number" value="0" min="0" max="24"></div>
+            <div class="flex p-1">Minutes <input id="input-timer-minutes" class="bg-gray-300 dark:bg-gray-700 w-16 h-6 p-1 ml-auto" type="number" value="5" min="0" max="60"></div>
+            <div class="flex p-1">Seconds <input  id="input-timer-seconds" class="bg-gray-300 dark:bg-gray-700 w-16 h-6 p-1 ml-auto" type="number" value="0" min="0" max="60"></div>
+        </div>
+        <div id="timer" class="text-2xl text-center p-2 m-2">
+            <span id="timer-hours">00</span>:<span id="timer-minutes">00</span>:<span id="timer-seconds">00</span>
+        </div>
+        <div class="flex justify-around text-sm mt-2">
+            <div id="menu-play"class="hover:text-gray-500"><i class="fas fa-play"></i> Start</div>
+            <div id="menu-stop"class="hover:text-gray-500"><i class="fas fa-stop"></i> Stop</div>
+            <div id="menu-close" class="hover:text-gray-500"><i class="fas fa-times"></i> Close</div>
+        </div>
+    </body>
+</html>

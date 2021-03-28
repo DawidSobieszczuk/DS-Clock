@@ -1,0 +1,24 @@
+<html class="dark">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+        <script defer src="main.js"></script>
+        <title>DS Clock</title>
+    </head>
+    <body class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 cursor-default select-none text-center">
+        <!-- Menu -->
+        <div class="flex justify-around text-sm m-1 mt-2">
+            <div id="menu-move"class="hover:text-gray-500 flex-1"><i class="fas fa-arrows-alt m-0"></i> Move </div>
+            <div id="menu-timer" class="hover:text-gray-500 flex-1"><i class="fas fa-stopwatch m-0"></i> Timer</div>
+        </div>
+        <!-- Clock -->
+        <div class="text-6xl p-1 mb-2" style="line-height: 0.8;">
+            <span id="clock-hours">05</span>:<span id="clock-minutes">23</span>:<span id="clock-seconds">17</span>
+        </div>
+        <!-- Date -->
+        <div class="flex text-sm justify-around p-1">
+            <div id="date-weekday" class="flex-1">Thursday</div>
+            <div class="flex-1"><span id="date-day">25</span>.<span id="date-month">03</span>.<span id="date-year">2021</span></div>
+        </div>
+    </body>
+</html>

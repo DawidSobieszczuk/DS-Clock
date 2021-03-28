@@ -1,0 +1,33 @@
+{
+  "name": "dsclock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "css-dev": "cross-env NODE_ENV=development TAILWIND_MODE=build postcss tailwind.css -o style.css",
+    "css-prod": "cross-env NODE_ENV=production TAILWIND_MODE=build postcss tailwind.css -o style.css",
+    "pack": "electron-builder --dir"
+  },
+  "author": "Dawid Sobieszczuk",
+  "license": "ISC",
+  "build": {
+    "appId": "dawidsobieszczuk.dsclock"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "electron": "^12.0.2",
+    "electron-builder": "^22.10.5",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.4"
+  },
+  "dependencies": {
+    "@electron/remote": "^1.0.4",
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@tailwindcss/forms": "^0.3.2",
+    "auto-launch": "^5.0.5",
+    "electron-json-storage": "^4.4.0"
+  }
+}
