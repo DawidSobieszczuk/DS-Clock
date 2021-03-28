@@ -113,7 +113,7 @@ function createWindows() {
     createTimerWindow();
 }
 
-function createTrayMenu() {
+function createAndShowTrayMenu() {
     if(tray == null) return;
 
     const constextMenu = Menu.buildFromTemplate([
@@ -170,16 +170,19 @@ function createTrayMenu() {
             role: 'quit'
         },
     ]);
-
+    constextMenu.popup();
     tray.setContextMenu(constextMenu);
 }
 
 function createTray() {
     tray = new Tray(nativeImage.createFromPath(__dirname + '/icon.png'));
 
-    createTrayMenu();
     tray.on('click', () => {
         mainWindow.focus();
+    });
+
+    tray.on('right-click', () => {
+        createAndShowTrayMenu();
     });
 }
 
@@ -265,6 +268,4 @@ storage.getMany(['darkMode', 'alwaysOnTop', 'alarmVolume'], (error, data) => {
     } else {
         alarmSoundVolume = data.alarmVolume;
     }
-
-    createTrayMenu();
 });
